@@ -1,6 +1,6 @@
 /* Ini CSS */
 
-header, main, footer {
+.main-header, main, footer {
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;

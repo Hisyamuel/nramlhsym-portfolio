@@ -1,15 +1,5 @@
 // Ini Javascript 2 //
 
-// Kata Sambutan //
-
-replaceName();
-
-function replaceName() {
-  let name = prompt('Masukkan nama Anda');
-  console.log(name);
-  document.getElementById('user-name').innerHTML = name;
-}
-
 // Form //
 
 function validateform() {
