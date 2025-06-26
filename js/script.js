@@ -1,4 +1,12 @@
-// Ini Javascript 2 //
+// Ini Sambutan //
+
+window.onload = function ubahNama() {
+  let nuevoTexto = prompt("Masukkan nama anda :", "Guest");
+
+  if (nuevoTexto != null) {
+    document.getElementById("user").innerText = nuevoTexto;
+  }
+}
 
 // Form //
 

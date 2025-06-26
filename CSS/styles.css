@@ -55,6 +55,12 @@ body {
     display: inline;
 }
 
+/* user */
+
+#user {
+    display: inline;
+}
+
 /* Navigasi */
 
 nav>ul {
