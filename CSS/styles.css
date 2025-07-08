@@ -1,5 +1,10 @@
 /* Ini CSS */
 
+p, label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+}
+
 .main-header, main, footer {
     text-align: center;
     opacity: 0;
@@ -164,32 +169,105 @@ header>p {
     justify-content: space-evenly;
 }
 
-.logo-profile1 {
-    height: 100px;
-    width: 100px;
-    background-image: url(../assets/instagram.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
+.container-social {
+    height: 100vh;
+    display: inline;
+    justify-content: center;
+    align-items: center;
 }
 
-.logo-profile2 {
-    height: 100px;
-    width: 100px;
-    background-image: url(../assets/whatsapp.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 100%;
+.social-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.logo-profile3 {
-    height: 100px;
-    width: 100px;
-    background-image: url(../assets/linkedin.png);
-    background-size: cover;
-    background-position: center;
-    border-radius: 50%;
+.social-list .icon-content {
+    position: relative;
+    margin: 0 10px;
+    padding: 0.5rem;
 }
+
+.social-list .icon-content .tooltip {
+    position: absolute;
+    top: 100%;
+    right: 110%;
+    color: #fff;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(200%);
+    transition: all 0.3s ease;
+}
+
+.social-list .icon-content:hover .tooltip {
+    opacity: 1;
+    visibility: visible;
+    top: -37px;
+}
+
+.social-list .icon-content a {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-list .icon-content a:hover {
+    box-shadow: 3px 2px 45px 0px rgb(0 0 0 / 12%);
+}
+
+.social-list .icon-content a svg {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    z-index: 1;
+}
+
+.social-list .icon-content a:hover {
+    color: #fff;
+}
+
+.social-list .icon-content a .filled {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: #000;
+    transition: all 0.3s ease-in-out;
+}
+
+.social-list .icon-content a:hover .filled {
+    height: 100%;
+}
+
+.social-list .icon-content a[data-social="instagram"] .filled,
+.social-list .icon-content a[data-social="instagram"]~.tooltip {
+    background: linear-gradient(45deg, #405de6, #5b51db, #b33ab4, #c135b4, #e1306c, #fd1f1f);
+}
+
+.social-list .icon-content a[data-social="linkedin"] .filled,
+.social-list .icon-content a[data-social="linkedin"]~.tooltip {
+    background-color: #0274b3;
+}
+
+.social-list .icon-content a[data-social="github"] .filled,
+.social-list .icon-content a[data-social="github"]~.tooltip {
+    background-color: #24262a;
+}
+
 
 /* Portfolio */
 
