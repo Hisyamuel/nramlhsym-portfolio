@@ -51,12 +51,15 @@ body {
 /* Main Header */
 
 .main-header {
-    display: flex;
+    display: inline-flex;
     width: 99vw;
     justify-content: space-between;
     margin-bottom: 20px;
     align-items: center;
     background-color: navy;
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
 @media only screen and (max-width: 375px) {
@@ -172,6 +175,12 @@ article {
     border-radius: 70px;
 }
 
+#image-profile img {
+   height: 100%; 
+   border-radius: 60px; 
+   outline: 0.1em solid white;
+}
+
 /* About Me */
 
 #section-about-me> header> h1 {
@@ -258,6 +267,13 @@ article {
     border-radius: 9px;
 }
 
+.education-sma img {
+    height: 230px; 
+    max-width: 280px; 
+    border-radius: 9px; 
+    outline: thin solid navy;
+}
+
 .education-sma p {
     display: block;
     padding-left: 6vw;
@@ -284,6 +300,13 @@ article {
     background-color: white;
     color: black;
     border-radius: 9px;
+}
+
+.education-kuliah img {
+    height: 230px; 
+    max-width: 280px; 
+    border-radius: 9px; 
+    outline: thin solid navy;
 }
 
 .education-kuliah p {
