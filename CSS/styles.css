@@ -8,12 +8,15 @@ html {
     box-sizing: border-box;
 }
 
-p, label {
+p,
+label {
     font-family: sans-serif;
     color: black;
 }
 
-.main-header, main, footer {
+.main-header,
+main,
+footer {
     text-align: center;
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
@@ -24,6 +27,7 @@ p, label {
     from {
         opacity: 0;
     }
+
     to {
         opacity: 1;
     }
@@ -34,6 +38,7 @@ p, label {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -66,7 +71,7 @@ body {
     .main-header {
         display: flex;
         flex-direction: column;
-    }   
+    }
 }
 
 /* Home */
@@ -88,7 +93,7 @@ body {
     .navigation {
         display: flex;
         flex-direction: column;
-    }   
+    }
 }
 
 
@@ -98,7 +103,7 @@ nav>ul {
     font-weight: 600;
     gap: 1rem;
     list-style: none;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav>ul>li>a {
@@ -161,34 +166,30 @@ article {
     flex-direction: column;
 }
 
-#text-profile> h4, p, h1 {
+#text-profile>h4,
+p,
+h1 {
     margin: 0;
 }
 
-#text-profile> hr {
+#text-profile>hr {
     visibility: visible;
 }
 
-#image-profile {
-    padding: 1vw 1vw 1vw 1vw;
-    background-color: navy;
-    border-radius: 70px;
-}
-
 #image-profile img {
-   height: 100%; 
-   border-radius: 60px; 
-   outline: 0.1em solid white;
+    width: 200px;
+    border-radius: 60px;
+    outline: 0.1em solid white;
 }
 
 /* About Me */
 
-#section-about-me> header> h1 {
+#section-about-me>header>h1 {
     text-align: center;
     padding-bottom: 1px;
 }
 
-#section-about-me> article> p {
+#section-about-me>article>p {
     text-align: start;
     padding: 0px 80px;
 }
@@ -203,18 +204,50 @@ article {
     width: 100%;
 }
 
-@keyframes slide_animation{
-    0% {left: 0px;}
-    10% {left: 0px;}
-    20% {left: 800px;}
-    30% {left: 800px;}
-    40% {left: 1350px;}
-    50% {left: 1350px;}
-    60% {left: 800px;}
-    70% {left: 800px;}
-    80% {left: 0px;}
-    90% {left: 0px;}
-    100% {left: 0px;}
+@keyframes slide_animation {
+    0% {
+        left: 0px;
+    }
+
+    10% {
+        left: 0px;
+    }
+
+    20% {
+        left: 800px;
+    }
+
+    30% {
+        left: 800px;
+    }
+
+    40% {
+        left: 1350px;
+    }
+
+    50% {
+        left: 1350px;
+    }
+
+    60% {
+        left: 800px;
+    }
+
+    70% {
+        left: 800px;
+    }
+
+    80% {
+        left: 0px;
+    }
+
+    90% {
+        left: 0px;
+    }
+
+    100% {
+        left: 0px;
+    }
 }
 
 .slide-images {
@@ -243,107 +276,49 @@ article {
 
 /* Education */
 
+#section-education {
+    padding: 20px;
+    display: flex;
+    gap: 1rem 2rem;
+    flex: 5;
+    flex-flow: column nowrap;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+}
+
 #section-education header {
     padding-bottom: 20px;
 }
 
-.education-info {
-    display: flex;
-    margin-top: 1em;
-    margin-bottom: 3em;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.4em;
-}
-
-.education-info .education-sma {
-    outline: thick solid navy;
-    max-width: 305px;
-    height: 230px;
-    flex: 0.2;
-    padding: 2vw 8vw 40vw 1vw;
-    background-color: white;
-    color: black;
-    border-radius: 9px;
-}
-
-.education-sma img {
-    height: 230px; 
-    max-width: 280px; 
-    border-radius: 9px; 
-    outline: thin solid navy;
-}
-
-.education-sma p {
-    display: block;
-    padding-left: 6vw;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
-}
-
-.education-sma .education-button {
-    display: flex;
-    justify-content: center;
-    margin: 0.8em 0 0.6em 0;
-    padding-left: 6vw;
-}
-
-.education-info .education-kuliah {
-    outline: thick solid navy;
-    max-width: 305px;
-    height: 230px;
-    flex: 0.2;
-    padding: 2vw 8vw 40vw 1vw;
-    background-color: white;
-    color: black;
-    border-radius: 9px;
-}
-
-.education-kuliah img {
-    height: 230px; 
-    max-width: 280px; 
-    border-radius: 9px; 
-    outline: thin solid navy;
-}
-
-.education-kuliah p {
-    padding-left: 6vw;
-    font-size: 1em;
-    font-weight: 500;
-    margin: 0.5em 0 0.5em 0;
-}
-
-.education-kuliah .education-button {
-    display: flex;
-    justify-content: center;
-    margin: 0.8em 0 0.6em 0;
-    padding-left: 6vw;
-}
-
-.education-button a {
-    text-decoration: none;
-    display: inline-block;
-    border: 1px solid black;
-    padding: 0.8em;
-    color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 300;
-    border-radius: 20px;
+#section-education h1 {
     text-align: center;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
+    color: navy;
 }
 
-.education-button a:hover {
+#section-education p {
+    text-align: justify;
     color: white;
-    background-color: black;
-    transform: scale(1.05);
+    padding-top: 20px;
 }
 
+.card {
+    box-shadow: 0 4px 8px 0 black;
+    background-color: navy;
+    border-radius: 70px;
+    padding: 20px;
+    margin-bottom: 20px;
+    gap: 1rem 2rem;
+}
 
+.main-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 4px 8px 0 yellow;
+    border-radius: 30px;
+}
 
 /* Skills */
 
@@ -449,7 +424,10 @@ article {
 /* Form */
 
 @media only screen and (max-width: 560px) {
-    form input, form textarea, form select {
+
+    form input,
+    form textarea,
+    form select {
         max-width: 270px;
         /* max-width: 299px; */
         height: 35px;
@@ -491,7 +469,8 @@ form {
     gap: 15px;
 }
 
-form input, form select {
+form input,
+form select {
     padding: 20px;
     border: 2px solid cornflowerblue;
     border-radius: 20px;
@@ -507,7 +486,9 @@ form textarea {
     transition: border-color 0.3s;
 }
 
-form input:focus, form textarea:focus, form select:focus {
+form input:focus,
+form textarea:focus,
+form select:focus {
     border-color: #000080;
     outline: none;
 }
@@ -658,32 +639,36 @@ form button:hover {
 /* Footer */
 
 footer {
-    background-color: navy;  /* warna biru tua */
-    padding: 15px 0;
-    width: 99vw;            /* pastikan 100% lebar layar */
-    height: 8vw;
-    margin: 0;               /* hilangkan margin bawaan */
-    left: 0;    
-}
-
-
-@media (max-width: 768px) {
-    footer {
-        padding: 12px 8px;
-    }
-    .footer-content p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-content p {
-        font-size: 13px;
-    }
+    padding: 20px;
+    background-color: navy;
+    text-align: center;
+    font-weight: bold;
+    z-index: 100;
 }
 
 footer p {
-    color: white;           /* warna teks */
-    text-align: center; 
+    color: yellow;
 }
 
+
+/* Perangkat dengan lebar layar 1200px dan di bawahnya */
+@media screen and (max-width: 1200px) {
+    main {
+        flex-flow: column nowrap;
+    }
+
+    main aside {
+        align-self: center;
+    }
+}
+
+/* Perangkat dengan lebar layar 768px dan di bawahnya */
+@media screen and (max-width: 768px) {
+    nav ul {
+        justify-content: center;
+    }
+
+    main aside {
+        align-self: stretch;
+    }
+}
