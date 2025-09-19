@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hisyam's Portfolio</title>
     <link rel="stylesheet" href="CSS\styles.css">
-    <script type="text/javascript" src="js/script.js"></script>
 </head>
 
 <body>
@@ -195,7 +194,7 @@
         <!---Message Me--->
         <section id="section-message-me">
             <!--Form-->
-            <form id="messageForm">
+            <form onsubmit="return messageForm();">
                 <header style="padding-bottom: 20px;">
                     <h1 style="color: white;">Message Me</h1>
                 </header>
@@ -210,7 +209,7 @@
                 </select>
 
                 <textarea id="message" name="message" placeholder="Masukkan Pesan" required></textarea>
-                <button type="button" id="btnSubmit">Submit</button>
+                <button type="submit" id="btnSubmit">Submit</button>
 
                 <!--Result Form-->
                 <textarea id="formOutput" placeholder="Data akan muncul di sini" readonly></textarea>
@@ -285,5 +284,5 @@
         <p>Nur Amali Hisyam &#169; 2025</p>
     </footer>
 </body>
-
+<script src="js/script.js" type="text/javascript"></script>
 </html>
