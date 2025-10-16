@@ -10,7 +10,7 @@ html {
 
 p,
 label {
-    font-family: sans-serif;
+    font-family: 'Inter', sans-serif;
     color: black;
 }
 
@@ -198,7 +198,7 @@ header {
 
 header>h1 {
     text-align: center;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter', sans-serif;
     color: #000080;
 }
 
@@ -237,7 +237,7 @@ article {
 }
 
 #text-profile {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter', sans-serif;
     text-align: start;
     display: flex;
     flex-direction: column;
@@ -267,9 +267,13 @@ h1 {
 }
 
 #section-about-me>article>p {
-    text-align: start;
-    padding: 0px 80px;
+    max-width: 100%; 
+    margin: 0 auto;  
+    padding: 20px;   
+    line-height: 1.6;
+    text-align: justify;
 }
+
 
 /* Photo Banner Slide */
 
@@ -374,7 +378,7 @@ h1 {
     flex: 5;
     flex-flow: column nowrap;
     color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Inter', sans-serif;
     text-align: left;
 }
 
@@ -738,7 +742,7 @@ footer {
 }
 
 footer p {
-    color: yellow;
+    color: white;
 }
 
 
