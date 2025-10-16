@@ -10,7 +10,7 @@ html {
 
 p,
 label {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Parkinsans', sans-serif;
     color: black;
 }
 
@@ -21,6 +21,10 @@ footer {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
     animation-delay: 0.5s;
+}
+
+h2 {
+    font-family: 'Parkinsans', sans-serif;
 }
 
 @keyframes fadeIn {
@@ -107,7 +111,7 @@ nav>ul {
     font-weight: 600;
     gap: 1rem;
     list-style: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Parkinsans', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav>ul>li>a {
@@ -198,7 +202,7 @@ header {
 
 header>h1 {
     text-align: center;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Parkinsans', sans-serif;
     color: #000080;
 }
 
@@ -237,7 +241,7 @@ article {
 }
 
 #text-profile {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Parkinsans', sans-serif;
     text-align: start;
     display: flex;
     flex-direction: column;
@@ -389,6 +393,11 @@ h1 {
 #section-education h1 {
     text-align: center;
     color: navy;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+h3 {
+    font-family: 'Parkinsans', sans-serif;
 }
 
 #section-education p {
@@ -548,6 +557,10 @@ h1 {
     justify-content: center;
 }
 
+form > input, select, button {
+    font-family: 'Parkinsans', sans-serif;
+}
+
 .contact-form {
     text-align: center;
     padding: 30px;
@@ -573,7 +586,7 @@ form select {
 }
 
 form textarea {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Parkinsans', Geneva, Tahoma, sans-serif;
     padding: 20px;
     width: 40vw;
     border: 2px solid cornflowerblue;
