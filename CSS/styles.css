@@ -640,6 +640,10 @@ form button:hover {
     justify-content: space-evenly;
 }
 
+hr {
+    border: #000080 2px solid;
+}
+
 /* Logo Profile Sosial Media */
 
 .container-social {
