@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hisyam's Portfolio</title>
-    <link rel="stylesheet" href="CSS\styles.css">
+    <link rel="stylesheet" href="CSS/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,7 +17,7 @@
 <body>
     <header class="main-header">
         <!--Logo-->
-        <div class="logo-icon"></div>
+        <div class="logo-icon" alt="logo-icons"></div>
 
         <!--Navigation-->
         <nav class="navigation">
@@ -99,13 +99,13 @@
                 <div class="slider-frame">
                     <div class="slide-images">
                         <div class="img-container">
-                            <img src="image/../assets/channels4_profile.jpg">
+                            <img src="image/../assets/channels4_profile.jpg" alt="channel">
                         </div>
                         <div class="img-container">
-                            <img src="image/../assets/yt-channel.jpg">
+                            <img src="image/../assets/yt-channel.jpg" alt="channel-profile">
                         </div>
                         <div class="img-container">
-                            <img src="image/../assets/wallpaper.png">
+                            <img src="image/../assets/wallpaper.png" alt="wallpaper">
                         </div>
                     </div>
                 </div>
@@ -118,18 +118,21 @@
             <h1>Education</h1>
             <div class="card">
                 <section>
-                    <h3>SMA Negeri 8 Samarinda</h3>
-                    <img src="assets/SMAN-8-Samarinda-1.jpeg" alt="sman8samarinda" class="main-image" />
+                    <h2>SMA Negeri 8 Samarinda</h2>
+                    <a href="https://sman8samarinda.sch.id/" target="_blank">
+                        <img src="assets/SMAN-8-Samarinda-1.jpeg" alt="sman8samarinda" class="main-image" />
+                    </a>
                     <p>
                         Saya sekolah di SMAN 8 Samarinda pada tahun 2019-2022 jurusan MIPA dan saya lulus pada tahun
                         2022.
                     </p>
                 </section>
-
+                <br />
                 <section>
-                    <h3>Universitas Terbuka</h3>
-                    <img src="assets/ilustrasi-universitas-terbuka-samarinda-evvde.jpg" alt="ut-samarinda"
-                        class="main-image" />
+                    <h2>Universitas Terbuka</h2>        
+                    <a href="https://https://samarinda.ut.ac.id/index.html" target="_blank">
+                        <img src="assets/ilustrasi-universitas-terbuka-samarinda-evvde.jpg" alt="ut-samarinda" class="main-image" />
+                    </a>
                     <p>
                         Saya berkuliah di Universitas Terbuka program studi Sistem Informasi cabang UPBJJ-UT Samarinda
                         pada tahun 2023-sekarang.
@@ -157,7 +160,6 @@
                     </div>
             </article>
         </section>
-        <hr />
 
         <!---Project--->
         <section id="section-project">
@@ -165,8 +167,51 @@
                 <h1>Project</h1>
                 <h2 style="text-align: center; color: red;">IN PROGRESS</h2>
             </header>
+            <div class="card-project">
+                <section>
+                    <h2>Biography Blog Website</h2>
+                    <a href="https://hisyamuel.github.io/profil-blog-hisyam/" target="_blank">
+                        <img src="assets/project/biografi.png" alt="biografi" class="main-image" />
+                    </a>
+                    <p>
+                       Ini adalah website blog pribadi Saya
+                    </p>
+                </section>
+            </div>
+            <div class="card-project">
+                <section>
+                    <h2>Bookshelf App Website</h2>
+                    <a href="https://hisyamuel.github.io/bookshelf-app/" target="_blank">
+                        <img src="assets/project/bookshelf.png" alt="bookshelf" class="main-image" />
+                    </a>
+                    <p>
+                        Ini adalah website rak buku digital yang saya buat menggunakan JavaScript.
+                    </p>
+                </section>
+            </div>
+            <div class="card-project">
+                <section>
+                    <h2>Notes App Website</h2>
+                    <a href="https://notes-app-nramlhsym.netlify.app/" target="_blank">
+                        <img src="assets/project/notes.png" alt="notes" class="main-image" />
+                    </a>
+                    <p>
+                        Ini adalah website aplikasi catatan yang saya buat menggunakan JavaScript.
+                    </p>
+                </section>
+            </div>
+            <div class="card-project">
+                <section>
+                    <h2>Story App Website</h2>
+                    <a href="https://nramlhsym-story-app.netlify.app/" target="_blank"> 
+                        <img src="assets/project/story.png" alt="story" class="main-image" />
+                    </a>
+                    <p>
+                        Ini adalah website aplikasi cerita yang memudahkan pengguna untuk berbagi cerita dan lokasi mereka dengan orang lain.
+                    </p>
+                </section>
+            </div>
         </section>
-        <hr />
 
         <!--Certificate-->
         <section id="section-certificate">
@@ -178,9 +223,6 @@
                     <img src="assets/sertifikat/Fundamental_Software_Engineering_RevoU.jpeg" alt="RevoU" />
                 </div>
                 <div id="certificate-info-item">
-                    <img src="assets/sertifikat/MySkill_Short_Class_Frontend_Development.jpeg" alt="MySkill" />
-                </div>
-                <div id="certificate-info-item">
                     <img src="assets/sertifikat/Bookil_Fullstack_Developer_HTML_CSS.jpeg" alt="HariSenin_HTML_CSS" />
                 </div>
                 <div id="certificate-info-item">
@@ -188,10 +230,19 @@
                         alt="HariSenin_JavaScript" />
                 </div>
                 <div id="certificate-info-item">
-                    <img src="assets/sertifikat/Alison_Diploma_in_HTML_CSS_and_JavaScript.jpeg" alt="Alison" />
+                    <img src="assets/sertifikat/Belajar_Dasar_Pemrograman_Web.png" alt="Dicoding-Web" />
                 </div>
                 <div id="certificate-info-item">
-                    <img src="assets/sertifikat/AI_Praktis_untuk_Produktivitas.jpeg" alt="Dicoding" />
+                    <img src="assets/sertifikat/Belajar_Dasar_Pemrograman_JavaScript.png" alt="Dicoding-JS" />
+                </div>
+                <div id="certificate-info-item">
+                    <img src="assets/sertifikat/Belajar_Membuat_Front-End_Web_Untuk_Pemula.png" alt="Dicoding-FE-P" />
+                </div>
+                <div id="certificate-info-item">
+                    <img src="assets/sertifikat/Belajar_Fundamental_Front-End_Web_Development.png" alt="Dicoding-FE-F" />
+                </div>
+                <div id="certificate-info-item">
+                    <img src="assets/sertifikat/Belajar_Pengembangan_Web_Intermediate.png" alt="Dicoding-Web-I" />
                 </div>
             </div>
         </section>
@@ -200,7 +251,7 @@
         <!---Message Me--->
         <section id="section-message-me">
             <!--Form-->
-            <form onsubmit="return messageForm();">
+            <form>
                 <header style="padding-bottom: 20px;">
                     <h1 style="color: white;">Message Me</h1>
                 </header>
