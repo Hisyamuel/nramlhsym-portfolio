@@ -272,7 +272,7 @@ article {
     #image-profile img {
 
         border-radius: 50px;
-        outline: 0.1em solid white;
+        outline: 0.1em solid black;
     }
 }
 
@@ -294,8 +294,10 @@ h1 {
 }
 
 #image-profile img {
+    height: 100%;
+    width: auto;
     border-radius: 60px;
-    outline: 0.1em solid white;
+    outline: 0.1em solid black;
 }
 
 /* About Me */
@@ -442,7 +444,7 @@ h3 {
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 black;
+    border: #000 2px solid;
     background-color: navy;
     border-radius: 70px;
     padding: 20px;
@@ -456,13 +458,14 @@ h3 {
     max-height: 400px;
     object-fit: cover;
     object-position: center;
+    cursor: pointer;
     border-radius: 30px;
     box-shadow: 0 4px 12px orange;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .main-image:hover {
     transform: translateY(-5px);
-    transition: ease-in-out 0.5ms;
     box-shadow: 0 4px 10px yellow;
 }
 
@@ -481,13 +484,21 @@ h3 {
 }
 
 #skills-item {
+    border: #000 2px solid;
     background-color: navy;
     display: flex;
     padding: 0.5em;
+    cursor: pointer;
     border-radius: 100em;
+    transition: transform 0.2s ease;
+}
+
+#skills-item:hover {
+    transform: scale(1.1);
 }
 
 #skills-item img {
+    border: 2px solid black;
     max-width: 150px;
     height: 150px;
     border-radius: 100em;
@@ -527,7 +538,7 @@ h3 {
 }
 
 .card-project {
-    box-shadow: 0 4px 8px 0 gray;
+    border: #000 2px solid;
     background-color: navy;
     border-radius: 30px;
     padding: 30px;
