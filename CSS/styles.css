@@ -22,10 +22,8 @@ img {
     max-width: 100%;
     height: 100%;
     display: block;
-    /* Mencegah spasi aneh di bawah gambar */
 }
 
-.main-header,
 main,
 footer {
     text-align: center;
@@ -63,7 +61,7 @@ h2 {
 /* Body */
 
 body {
-    background-image: url(../assets/background.jpg);
+    background-color: #ecececf6;
     padding: 0;
     margin: 0;
     font-size: 16px;
@@ -95,12 +93,10 @@ body {
 
     body {
         font-size: 14px;
-        /* Perkecil font dasar di mobile */
     }
 
     h1 {
         font-size: 2rem;
-        /* 2 x 14px = 28px */
     }
 
     #section-home>header>h1 {
@@ -177,9 +173,10 @@ nav>ul>li>a:hover {
 
     /* Sembunyikan menu dan tampilkan hamburger */
     .nav-menu {
+        border-top-left-radius: 16px;
+        border-bottom-left-radius: 16px;
         position: fixed;
-        left: -100%;
-        /* Sembunyikan menu di luar layar */
+        right: -100%;
         top: 60px;
         flex-direction: column;
         background-color: navy;
@@ -190,8 +187,7 @@ nav>ul>li>a:hover {
 
     /* Gaya saat menu aktif (terbuka) */
     .nav-menu.active {
-        left: 0;
-        /* Tampilkan menu */
+        right: 0;
     }
 
     .nav-item {
@@ -446,7 +442,7 @@ h3 {
 .card {
     border: #000 2px solid;
     background-color: navy;
-    border-radius: 70px;
+    border-radius: 20px;
     padding: 20px;
     margin-bottom: 10px;
     gap: 1rem 2rem;
@@ -541,7 +537,7 @@ h3 {
     border: #000 2px solid;
     background-color: navy;
     border-radius: 30px;
-    padding: 30px;
+    padding: 20px 30px;
     margin-bottom: 40px;
     gap: 1rem 2rem;
 }
@@ -604,7 +600,6 @@ h3 {
     form textarea,
     form select {
         max-width: 299px;
-        /* max-width: 299px; */
         height: 60px;
     }
 }
@@ -615,7 +610,6 @@ h3 {
     form textarea,
     form select {
         max-width: 299px;
-        /* max-width: 220px; */
         height: 60px;
     }
 }
@@ -864,7 +858,6 @@ footer p {
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
-        /* Gunakan persentase agar fleksibel */
     }
 
     nav ul {
