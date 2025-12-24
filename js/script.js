@@ -1,12 +1,27 @@
 // Ini Sambutan //
-
-window.onload = function ubahNama() {
-  let nuevoTexto = prompt("Masukkan nama anda :", "Guest");
-
-  if (nuevoTexto != null) {
-    document.getElementById("user").innerText = nuevoTexto;
-  }
-}
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.customNotify) {
+        window.customNotify.showConfirm(
+            "Halo! Selamat datang. Silahkan masukkan nama Anda :",
+            (namaInput) => {
+                const name = namaInput && namaInput.trim() !== "" ? namaInput : "Guest";
+                const userElement = document.getElementById("user");
+                if (userElement) {
+                    userElement.innerText = name;
+                    window.customNotify.showToast(`Halo ${name}, selamat datang di web portfolio saya`, "info");
+                }
+            },
+            () => {
+                window.customNotify.showToast("Menjelajah sebagai Tamu", "info");
+            },
+            {
+                title: "Greetings!",
+                confirmText: "Simpan",
+                cancelText: "Lewati"
+            }
+        );
+    }
+});
 
 // Navigasi //
 const hamburger = document.querySelector('.hamburger');
@@ -61,6 +76,28 @@ function messageForm() {
        return false;
 }};
 
+// Logic Kembali Ke Atas
+const backToTopBtn = document.getElementById("backToTopBtn");
+
+if (backToTopBtn) {
+    // Memantau Scroll User
+    window.addEventListener("scroll", () => {
+        // Jika scroll lebih dari 300px ke bawah, akan memunculkan tombol
+        if (window.scrollY > 300) {
+            backToTopBtn.classList.add("show");
+        } else {
+            backToTopBtn.classList.remove("show");
+        }
+    });
+
+    // Aksi Klik (Scroll ke Atas)
+    backToTopBtn.addEventListener("click", () => {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth" 
+        });
+    });
+}
 
   
 

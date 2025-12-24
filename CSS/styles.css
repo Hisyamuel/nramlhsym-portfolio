@@ -30,6 +30,7 @@ footer {
     opacity: 0;
     animation: fadeInUp 1s ease forwards;
     animation-delay: 0.5s;
+    transition: opacity 0.8s ease;
 }
 
 h2 {
@@ -88,7 +89,9 @@ body {
     }
 
     .main-header .logo-icon {
-        margin: 10px 0;
+        margin-left: 8px;
+        height: 25px;
+        width: 25px;
     }
 
     body {
@@ -99,8 +102,12 @@ body {
         font-size: 2rem;
     }
 
-    #section-home>header>h1 {
-        font-size: 1em
+    #image-profile img {
+        display: none;
+    }
+
+    #section-home .tooltip {
+        display: none;
     }
 }
 
@@ -240,8 +247,12 @@ header>h1 {
 
 /* Introduction */
 
+#section-home {
+    margin-bottom: 50px;
+}
+
 #introduction {
-    padding: 40px 80px;
+    padding: 40px 80px 10px;
 }
 
 article {
@@ -250,7 +261,6 @@ article {
 }
 
 #profile {
-    height: 350px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -266,7 +276,6 @@ article {
     }
 
     #image-profile img {
-
         border-radius: 50px;
         outline: 0.1em solid black;
     }
@@ -736,8 +745,7 @@ hr {
 .social-list {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+    padding-left: 50px;
 }
 
 .social-list .icon-content {
@@ -749,14 +757,15 @@ hr {
 .social-list .icon-content .tooltip {
     position: absolute;
     top: 100%;
-    right: 110%;
+    right: 200%;
+    left: -229%;
     color: #fff;
     font-size: 14px;
     padding: 6px 10px;
     border-radius: 5px;
     opacity: 0;
     visibility: hidden;
-    transform: translateY(200%);
+    transform: translatex(200%);
     transition: all 0.3s ease;
 }
 
@@ -842,6 +851,211 @@ footer p {
     color: white;
 }
 
+/* Notifikasi Pop-Up Ganti Nama */
+
+.confirm-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Kotak dialog di tengah */
+.confirm-dialog {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.confirm-title {
+    margin: 10px 0;
+    color: #000080;
+}
+
+.confirm-input {
+    width: 100%;
+    padding: 12px;
+    margin: 15px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.confirm-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Styling Tombol agar Elegan */
+.confirm-btn {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.confirm-btn-confirm {
+    background: #3333ff;
+    color: white;
+}
+
+.confirm-btn-confirm:hover {
+    animation: 0.9s ease-in;
+    background: #000080;
+}
+
+.confirm-btn-cancel {
+    background: black;
+    color: #fff;
+}
+
+.confirm-btn-cancel:hover {
+    background: #575656;
+}
+
+/* Animasi sederhana */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Container utama untuk menumpuk toast */
+.toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Styling satuan kartu toast */
+.toast {
+    min-width: 250px;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-left: 5px solid #000080;
+    animation: slideInRight 0.3s ease forwards;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Warna berdasarkan tipe toast */
+.toast.info {
+    border-left-color: #000080;
+}
+
+.toast-icon {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000080;
+}
+
+.toast-message {
+    color: #333;
+    font-size: 0.9rem;
+    font-family: sans-serif;
+}
+
+.toast-close {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 1.2rem;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Animasi Masuk */
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Animasi Keluar (saat dihapus) */
+.toast.hiding {
+    animation: slideOutRight 0.3s ease forwards;
+}
+
+@keyframes slideOutRight {
+    to {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+/* Tombol kembali ke Atas */
+#backToTopBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+
+    width: 50px;
+    height: 50px;
+    background-color: navy;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efek Hover */
+#backToTopBtn:hover {
+    background-color: #357ABD;
+    transform: translateY(-5px);
+}
+
+#backToTopBtn.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
 
 /* Perangkat dengan lebar layar 1200px dan di bawahnya */
 @media screen and (max-width: 1200px) {
@@ -851,6 +1065,10 @@ footer p {
 
     main aside {
         align-self: center;
+    }
+
+    #section-home .tooltip {
+        display: none;
     }
 }
 
