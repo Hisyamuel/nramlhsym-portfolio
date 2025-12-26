@@ -109,6 +109,10 @@ body {
     #section-home .tooltip {
         display: none;
     }
+
+    .footer-detail {
+        flex-direction: column;
+    }
 }
 
 /* Home */
@@ -840,16 +844,99 @@ hr {
 
 /* Footer */
 
-footer {
+.footer-copyright {
     padding: 50px 0 40px 0;
     background-color: navy;
     text-align: center;
     font-weight: bold;
     font-size: large;
+    color: white;
+}
+
+.footer-detail {
+    display: flex;
+    gap: 1em;
+    padding: 1.2em;
+    background-color: #dedede;
+}
+
+.footer-detail>.footer-about {
+    padding: 1.2em;
+}
+
+.footer-detail>.footer-about, .contact-info {
+    flex: 2;
+}
+
+.footer-detail h2 {
+    color: navy;
+    text-align: start;
+}
+
+.footer-detail p {
+    font-size: medium;
+    text-align: justify;
 }
 
 footer p {
-    color: white;
+    font-size: small;
+    text-align: start;
+    color: rgb(0, 0, 0);
+}
+
+.quick-nav {
+    display: flex;
+    padding: 1.2em 7em 1.2em 1.2em;
+    flex-direction: column;
+}
+
+.quick-nav>h2 {
+    margin-bottom: 0;
+    padding-right: 20px;
+}
+
+.quick-nav>ul {
+    text-align: start;
+    padding-left: 0;
+}
+
+.quick-nav li {
+    list-style: none;
+    padding-bottom: 10px;
+}
+
+.quick-nav a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Parkinsans', sans-serif;
+}
+
+.quick-nav a:hover {
+    border-bottom: 3px solid navy;
+}
+
+.contact-info {
+    padding: 1.2em 0 1.2em 1.2em;
+}
+
+.contact-info>p {
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+.contact-info>p>a {
+    font-family: 'Parkinsans', sans-serif;
+}
+
+.ph-envelope, .ph-whatsapp-logo {
+    font-size: 1.5em;
+    margin-right: 0.5em;
+}
+
+.contact-info .contact-info-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.3em;
 }
 
 /* Notifikasi Pop-Up Ganti Nama */
@@ -1034,7 +1121,7 @@ footer p {
     background-color: navy;
     color: white;
     border: none;
-    border-radius: 50%;
+    border-radius: 30%;
     font-size: 1.5rem;
     cursor: pointer;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -1071,6 +1158,10 @@ footer p {
     #section-home .tooltip {
         display: none;
     }
+
+    .footer-detail {
+        flex-direction: column;
+    }
 }
 
 /* Perangkat dengan lebar layar 768px dan di bawahnya */
@@ -1089,5 +1180,13 @@ footer p {
 
     #section-education {
         flex-direction: column;
+    }
+
+    .footer-detail {
+        flex-direction: column;
+    }
+
+    .footer-detail p{
+        text-align: start;
     }
 }
