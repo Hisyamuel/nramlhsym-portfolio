@@ -481,6 +481,7 @@ button[type="submit"] {
     border-radius: 10px;
     cursor: pointer;
     transition: 0.3s;
+    font-family: 'Parkinsans', sans-serif;
 }
 
 button[type="submit"]:hover {
