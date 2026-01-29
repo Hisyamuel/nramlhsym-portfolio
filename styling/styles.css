@@ -472,6 +472,10 @@ input, select, textarea {
     transition: 0.3s;
 }
 
+input[type="date"], select, option {
+    cursor: pointer;
+}
+
 ::placeholder { 
     color: #999999; 
     opacity: 1; 

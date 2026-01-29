@@ -42,39 +42,48 @@ document.querySelectorAll('.nav-link').forEach(link => {
 });
 
 
-// Form //
+// Form submission using Fetch to Formspree
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
 
-function messageForm() {
-  let name = document.getElementById('name').value;
-  let birth = document.getElementById('birth').value;
-  let gender = document.getElementById('gender').value;
-  let message = document.getElementById('message').value;
+    const formspreeEndpoint = 'https://formspree.io/f/mrekpbkl';
 
+    let name = document.getElementById('name').value;
+    let birth = document.getElementById('birth').value;
+    let gender = document.getElementById('gender').value;
+    let message = document.getElementById('message').value;
 
-  if (name === "" || birth === "" || gender === "" || message === "") {
-      alert('Pesan Harus Terisi');
-      return false;
-  }
+    if (name === "" || birth === "" || gender === "" || message === "") {
+        alert('Pesan Harus Terisi');
+        return;
+    }
 
-  setSenderUI(name, birth, gender, message);
+    const formData = new FormData(this);
 
-  return false;
-}
-
-  // Output Form //
-  function setSenderUI (name, birth, gender, message) {
-    document.getElementById("name").innerHTML = name;
-    document.getElementById("birth").innerHTML = birth;
-    document.getElementById("gender").innerHTML = gender;
-    document.getElementById("message").innerHTML = message;
-
-    
-// Validasi Form //
-    if (!name || !birth || !gender || !message) {
-       alert('Pesan Harus Terisi');
-
-       return false;
-}};
+    fetch(formspreeEndpoint, {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+    }).then(response => {
+        if (response.ok) {
+            window.customNotify.showToast('Your message has been sent successfully!', "success");
+            document.getElementById('contact-form').reset();
+        } else {
+            response.json().then(data => {
+                if (Object.hasOwn(data, 'errors')) {
+                    window.customNotify.showToast(data["errors"].map(error => error["message"]).join(", "), "error");
+                } else {
+                    window.customNotify.showToast('Oops! There was a problem submitting your form', "error");
+                }
+            })
+        }
+    }).catch(error => {
+        console.error('Error:', error);
+        window.customNotify.showToast('Oops! There was a problem submitting your form', "error");
+    });
+});
 
 // Logic Kembali Ke Atas
 const backToTopBtn = document.getElementById("backToTopBtn");
