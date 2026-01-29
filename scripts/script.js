@@ -46,8 +46,7 @@ document.querySelectorAll('.nav-link').forEach(link => {
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // YOU NEED TO REPLACE 'YOUR_FORM_ID' with your actual Formspree form ID
-    const formspreeEndpoint = 'https://formspree.io/f/YOUR_FORM_ID';
+    const formspreeEndpoint = 'https://formspree.io/f/mrekpbkl';
 
     let name = document.getElementById('name').value;
     let birth = document.getElementById('birth').value;
@@ -69,20 +68,20 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         }
     }).then(response => {
         if (response.ok) {
-            window.customNotify.showToast('Your message has been sent successfully!');
+            window.customNotify.showToast('Your message has been sent successfully!', "success");
             document.getElementById('contact-form').reset();
         } else {
             response.json().then(data => {
                 if (Object.hasOwn(data, 'errors')) {
-                    alert(data["errors"].map(error => error["message"]).join(", "));
+                    window.customNotify.showToast(data["errors"].map(error => error["message"]).join(", "), "error");
                 } else {
-                    window.customNotify.showToast('Oops! There was a problem submitting your form');
+                    window.customNotify.showToast('Oops! There was a problem submitting your form', "error");
                 }
             })
         }
     }).catch(error => {
         console.error('Error:', error);
-        window.customNotify.showToast('Oops! There was a problem submitting your form');
+        window.customNotify.showToast('Oops! There was a problem submitting your form', "error");
     });
 });
 
