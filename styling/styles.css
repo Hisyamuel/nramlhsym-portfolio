@@ -274,6 +274,43 @@ a {
     }
 }
 
+
+.slider-container {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+    padding: 30px 0;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+}
+
+.slider-track {
+    display: flex;
+    width: max-content; 
+    gap: 30px; 
+}
+
+.tech-track {
+    animation: scrollAnimation 25s linear infinite; 
+}
+
+.cert-track {
+    animation: scrollAnimation 40s linear infinite; 
+}
+
+@keyframes scrollAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.slider-container:hover .slider-track {
+    animation-play-state: paused;
+}
+
 /* CARDS GLOBAL STYLE */
 .card {
     background: var(--primary-navy);
@@ -327,40 +364,36 @@ a {
 }
 
 /* SKILLS */
-.skills-grid {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
 
 .skill-pill {
+    flex-shrink: 0; 
     display: flex;
     align-items: center;
-    gap: 15px;
-    padding: 15px 30px;
+    gap: 12px;
+    padding: 12px 24px;
     background: white;
     border-radius: 50px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
     border: 1px solid #eee;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .skill-pill:hover {
     border-color: var(--primary-navy);
-    transform: scale(1.05);
+    transform: scale(1.1);
 }
 
 .skill-pill img {
     width: 40px;
     height: 40px;
-    border-radius: 50%;
+    object-fit: contain;
 }
 
 .skill-pill span {
     font-weight: 700;
     color: var(--primary-navy);
+    white-space: nowrap;
 }
 
 /* PROJECT */
@@ -410,23 +443,30 @@ a {
 }
 
 /* CERTIFICATES */
-.certificate-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+.cert-item {
+    flex-shrink: 0; 
+    width: 320px;   
+    border-radius: 12px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid #eee;
+    cursor: pointer;
 }
 
 .cert-item img {
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-    cursor: pointer;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
 }
 
 .cert-item img:hover {
     transform: scale(1.05);
-    z-index: 2;
+    z-index: 10;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    border-color: var(--accent-yellow);
 }
 
 /* FORM */
@@ -819,6 +859,21 @@ html, body {
     
     .input-group {
         flex-direction: column;
+    }
+
+    /* Certification dan Tech Stack Section */
+    .cert-item {
+        width: 260px; 
+    }
+    .cert-item img {
+        height: 180px;
+    }
+    
+    .tech-track { 
+        animation-duration: 20s; 
+    }
+    .cert-track { 
+        animation-duration: 30s; 
     }
 }
 
