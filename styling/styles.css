@@ -33,11 +33,11 @@ html {
 
 /* Warna untuk Mode Gelap */
 body.dark-mode {
-   --primary-navy: #183051;
+   --primary-navy:#101f34;
     --secondary-navy: #113778; 
     --accent-yellow: #ffcc00; 
     --text-white: #d0d0d0;
-    --text-slate: #101f34;
+    --text-slate: #102647;
     --white: #323232;
     --text-color: #fff;
 }
@@ -125,7 +125,7 @@ a {
     position: fixed;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 20px var(--primary-navy);
 }
 
 .logo-icon {
