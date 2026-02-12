@@ -23,6 +23,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Dark Mode //
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+const icon = themeToggle.querySelector('i');
+
+// Cek preferensi tersimpan
+if (localStorage.getItem('theme') === 'dark') {
+    body.classList.add('dark-mode');
+    icon.classList.replace('ph-moon', 'ph-sun');
+}
+
+themeToggle.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    
+    if (body.classList.contains('dark-mode')) {
+        localStorage.setItem('theme', 'dark');
+        icon.classList.replace('ph-moon', 'ph-sun');
+    } else {
+        localStorage.setItem('theme', 'light');
+        icon.classList.replace('ph-sun', 'ph-moon');
+    }
+});
+
 // Navigasi //
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
