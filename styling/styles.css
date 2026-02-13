@@ -140,7 +140,7 @@ a {
 .nav-menu {
     display: flex;
     gap: 30px;
-    margin-left: 530px;
+    margin-left: 440px;
 }
 
 .nav-menu a {
@@ -472,6 +472,95 @@ a {
 .project-info h3 {
     color: var(--accent-yellow);
     font-size: 1.4rem;
+}
+
+/* EXPERIENCES */
+.timeline-container {
+    position: relative;
+    max-width: 800px; 
+    margin: 0 auto;
+    padding: 20px 15px;
+}
+
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px; 
+    width: 2px;
+    background-color: var(--accent-yellow); 
+}
+
+body.dark-mode .timeline-container::before {
+    background-color: var(--accent-yellow); 
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 55px; 
+    margin-bottom: 45px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-icon {
+    position: absolute;
+    left: 15px;
+    top: 2px; 
+    font-size: 24px;
+    color: var(--accent-yellow); 
+    background-color: var(--bg-color); 
+    border-radius: 50%;
+    /* Box shadow */
+    box-shadow: 0 0 0 6px var(--bg-color); 
+    z-index: 5;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.timeline-item:hover .timeline-icon {
+    transform: scale(1.1);
+}
+
+.timeline-content {
+    transition: transform 0.3s ease;
+}
+
+.timeline-item:hover .timeline-content {
+    transform: translateX(8px); 
+}
+
+.timeline-date {
+    font-family: 'Parkinsans', sans-serif; 
+    font-size: 0.95rem;
+    color: #8892b0;
+    font-style: italic;
+    display: block;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.timeline-title {
+    font-size: 1.35rem;
+    color: var(--primary-navy);
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.timeline-subtitle {
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+}
+
+body.dark-mode .timeline-title {
+    color: #ccd6f6;
+}
+
+body.dark-mode .timeline-subtitle {
+    color: var(--text-color);
 }
 
 /* CERTIFICATES */
@@ -817,9 +906,9 @@ html, body {
     }
 
     .nav-menu a {
-        font-size: 1.2rem;
+        font-size: 1rem;
         display: block;
-        padding: 10px;
+        padding: 5px;
     }
 
     /* Hamburger Button & Animation */
@@ -911,6 +1000,24 @@ html, body {
     }
     .cert-track { 
         animation-duration: 30s; 
+    }
+
+    /* Experiences Section */
+    .timeline-container::before {
+        left: 35px; 
+    }
+    
+    .timeline-item {
+        padding-left: 45px;
+    }
+    
+    .timeline-icon {
+        left: 10px;
+        font-size: 22px;
+    }
+    
+    .timeline-title {
+        font-size: 1.2rem;
     }
 }
 
