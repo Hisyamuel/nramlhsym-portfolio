@@ -44,9 +44,8 @@
     <main>
         <section id="section-home" class="container">
             <div class="hero-content">
-                <h4 class="greeting">Hi
-                    <span id="user" style="background-color: #ffcc00; border-radius: 10px; padding: 3px; color: 101f34;">Guest</span>,
-                    Welcome to my Portfolio!
+                <h4 class="greeting">
+                    Hi <span id="user">Guest</span>, Welcome to my Portfolio!
                 </h4>
                 <h1 class="hero-title">I'm <span class="highlight">Nur Amali Hisyam</span></h1>
                 <h2 class="hero-subtitle"><span style="color: blue;">Front-End Developer</span> based in Samarinda.</h2>
@@ -381,17 +380,21 @@
                     <p>Interested in working together? Fill out the form below.</p>
                 </header>
                 <form id="contact-form">
-                    <div class="input-group">
+                    <label class="input-group">
                         <input type="text" id="name" name="name" placeholder="Your Name" required>
                         <input type="date" id="birth" name="birth" required>
-                    </div>
-                    <select id="gender" name="gender" required>
-                        <option value="">Select Gender</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                    </select>
-                    <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
-                    <button type="submit" id="btnSubmit">Send Message</button>
+                    </label>
+                    <label>
+                        <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </label>
+                    <label>
+                        <textarea id="message" name="message" placeholder="Type your message here..." required></textarea>
+                    </label>
+                    <button type="submit" id="btnSubmit">Send Message</button>    
                 </form>
             </div>
         </section>
@@ -405,8 +408,7 @@
                 <p>
                     Ini adalah web portfolio saya yang menampilkan perjalanan karir saya.
                     Saya adalah Front-End Developer yang berdedikasi menciptakan pengalaman web yang fungsional dan
-                    estetis.
-                    Jangan ragu untuk menghubungi saya untuk kolaborasi.
+                    estetis. Jangan ragu untuk menghubungi saya untuk kolaborasi.
                 </p>
             </div>
 
